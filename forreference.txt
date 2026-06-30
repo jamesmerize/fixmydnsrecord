@@ -1,0 +1,7 @@
+python -m venv venv
+venv\Scripts\activate
+Install MkDocs along with the Material theme and key optimization plugins for minification and redirect handling:
+ pip install mkdocs mkdocs-material mkdocs-minify-plugin mkdocs-redirects
+Initialize the directory. This creates your core configuration file and the source folder:
+ mkdocs new .
+ mkdocs serve

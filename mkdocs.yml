@@ -1,0 +1,62 @@
+site_name: Fix My DNS Record
+site_url: https://fixmydnsrecord.com
+site_description: Premium B2B DNS configuration and email deliverability consulting. Fix SPF, DKIM, DMARC, and eliminate spam folder issues.
+site_author: James Mascarenhas
+remote_branch: gh-pages
+
+theme:
+  name: material
+  language: en
+  palette:
+    # Sleek dark mode accenting elite tech authority
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs          # Top-level horizontal B2B layout
+    - navigation.sections      # Well-organized sidebar sections
+    - navigation.instant       # SPA-like instant page loading (Huge for core web vitals)
+    - navigation.tracking      # Update URL hash based on scroll depth
+    - content.code.copy        # Allows visitors to easily copy your DNS configurations
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+  - redirects:
+      redirect_maps: {}
+
+extra:
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX # Replace with your real GA4 tag later
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/yourprofile
+    - icon: fontawesome/solid/envelope
+      link: mailto:support@fixmydnsrecord.com
+
+# Nav structured around conversion funnels and transactional SEO keywords
+nav:
+  - Home: index.md
+  - Solutions & Pricing: services.md
+  - Urgent Fixes (SEO Engine):
+      - "Overview": guides/index.md
+      - "Fix Conflicting SPF Records": guides/fix-conflicting-spf.md
+      - "Solve Google Workspace 550 Error": guides/google-workspace-550.md
+      - "Setup Office 365 DKIM": guides/office365-dkim-setup.md
+  - Case Studies: cases.md
+  - Contact / Audit: contact.md
